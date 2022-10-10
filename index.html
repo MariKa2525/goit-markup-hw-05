@@ -14,6 +14,16 @@
 </head>
 
 <body>
+
+    <div class="backdrop is-hidden" data-modal>
+        <div class="modal">
+            <button data-modal-close class="modal-btn" type="button">
+                <svg class="backdrop-icon" width="11px" height="11px">
+                    <use href="./image/icons.svg#icon-vector"></use>
+                </svg></button>
+        </div>
+    </div>
+
     <!--Шапка сайта-->
     
     <header class="page-header">
@@ -56,7 +66,7 @@
         <section class="hero">
             <div class="container">
             <h1 class="hero-title">Ефективні рішення для вашого бізнесу</h1>
-            <button type="button" name="button" class="hero-btn">Замовити послугу</button>
+            <button data-modal-open type="button" name="button" class="hero-btn">Замовити послугу</button>
            </div>
         </section>
     </div>
@@ -104,16 +114,36 @@
 
         <!--Приклади роботи-->
         <section class="work section">
-        <div class="container">
+            <div class="container">
                 <h2 class="section-title">Чим ми займаємося</h2>
-
-            <ul class="work-list list" >
-                <li class="work-item"><img src="./image/box-1.jpg" alt="Робоче місце" width="370"/></li>
-                <li class="work-item"><img src="./image/box-2.jpg" alt="Ноутбук" width="370"/></li>
-                <li class="work-item"><img src="./image/box-3.jpg" alt="Планшет" width="370"/></li>
+            <ul class="work-list list">
+                <li class="work-item">
+                    <div class="label-thumb">
+                        <img class="work-img" src="./image/box-1.jpg" alt="Робоче місце" width="370"/>
+                        <div class="label-actions">
+                            <p class="label-text">Десктопні додатки</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="work-item">
+                    <div class="label-thumb">
+                        <img class="work-img" src="./image/box-2.jpg" alt="Ноутбук" width="370"/>
+                        <div class="label-actions">
+                            <p class="label-text">Мобільні додатки</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="work-item">
+                    <div class="label-thumb">
+                        <img class="work-img" src="./image/box-3.jpg" alt="Планшет" width="370"/>
+                        <div class="label-actions">
+                            <p class="label-text">Дизайнерські рішення</p>
+                        </div>
+                    </div>
+                </li>
             </ul>
         </div>
-        </section>
+    </section>
    
 
         <!--Команда-->
@@ -323,6 +353,8 @@
         </div>
     </div>
 </footer>
+
+<script src="./js/modal.js"></script>
 </body>
 
 </html>
